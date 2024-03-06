@@ -35,6 +35,7 @@ void displayAllStudents(const vector<Student> &database){
 }
 
 int main(){
+    cout << "\033[1;31m"; // Set text color to red
     vector<Student> studentDatabase;
     int choice;
     do{
