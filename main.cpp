@@ -34,6 +34,37 @@ void displayAllStudents(const vector<Student> &database){
     }
 }
 
+int main(){
+    vector<Student> studentDatabase;
+    int choice;
+    do{
+        cout << "\nMenu:\n";
+        cout << "1. Ajouter un étudiant\n";
+        cout << "2. Afficher tous les étudiants\n";
+        cout << "3. Quitter\n";
+        cout << "Choisissez une option: ";
+        cin >> choice;
+        cin.ignore();
+
+        switch (choice){
+
+            case 1:
+                ajouterStudent(studentDatabase);
+                break;
+            case 2:
+                displayAllStudents(studentDatabase);
+                break;
+            case 3:
+                cout << "Programme terminé.\n";
+                break;
+            default:
+                cout << "Option invalide. Veuillez entrer un nombre entre 1 et 3.\n";
+        }
+    } while (choice !=3);
+
+    return 0;
+}
+
 
 
 
